@@ -1,0 +1,23 @@
+<!--view-->
+<form action="/post" method="get">
+  <div class="form-group">
+    <label for="InputTitle">TITLE</label>
+    <input type="text" class="form-control" name="title" placeholder="Enter title">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputContent">CONTENT</label>
+    <textarea class="form-control" rows="5" name="content"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class = "container">
+    <ul>
+        <% @posts.each do |p| %>
+            <li>제목 : <%= p.title %> </li>
+            <li>제목 : <%= p.content %> </li>
+      <% end %>
+    </ul>
+    </div>
